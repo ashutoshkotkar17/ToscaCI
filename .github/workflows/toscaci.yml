@@ -37,7 +37,7 @@ jobs:
       - name: Copy Files to Deployment
         run: 'Xcopy /e /i /y * C:\Deployment\'
       - name: Run TOSCA Test
-        run: '"C:\github\ToscaCI\Client\ToscaCIClient.exe" -m distributed -c "C:\github\ToscaCI\Client\SampleConfiguration.xml" -r "C:\gitHub\Results\Result.xml"'
+        run: 'C:\github\ToscaCI\Client\ToscaCIClient.exe -m distributed -c "C:\github\ToscaCI\Client\SampleConfiguration.xml" -r "C:\gitHub\Results\Result.xml"'
       - name: Upload Test Results
         if: always()
         uses: actions/upload-artifact@v2
