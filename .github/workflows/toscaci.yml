@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v3
-    - task: PowerShell@2
+      task: PowerShell@2
       inputs:
         targetType: 'inline'
         script: |
