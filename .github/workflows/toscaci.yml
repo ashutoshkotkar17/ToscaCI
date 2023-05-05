@@ -22,15 +22,27 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+         # PowerShell script Write-Host 'Hello, world!'  
+      
+      
+      
+      
+ #-------------------------------------------------------------------------------------------------------------------------------------------------     
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
       # Runs a set of commands using the runners shell
-      - name: Run TOSCA Test
-        run: 'C:\github\ToscaCI\Client\ToscaCIClient.exe -m distributed -c "C:\github\ToscaCI\Client\SampleConfiguration.xml" -r "C:\gitHub\Results\Result.xml"'
-      - name: Upload Test Results
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: Unit Test Results
-          path: 'C:\gitHub\Results\Result.xml'
+      #- name: Run TOSCA Test
+       # run: 'C:\github\ToscaCI\Client\ToscaCIClient.exe -m distributed -c "C:\github\ToscaCI\Client\SampleConfiguration.xml" -r "C:\gitHub\Results\Result.xml"'
+      #- name: Upload Test Results
+       # if: always()
+        #uses: actions/upload-artifact@v2
+        #with:
+         # name: Unit Test Results
+          #path: 'C:\gitHub\Results\Result.xml'
+
+
